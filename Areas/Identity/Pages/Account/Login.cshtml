@@ -57,11 +57,11 @@
                                             @foreach (var provider in Model.ExternalLogins!) {
                                                 if (provider.Name == "Google") {
 
-                                                    <button type="submit" class="btn btn-primary rounded-5 shadow" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                                    <button type="submit" class="btn btn-primary rounded-4 shadow" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
                                                         <i class="bi bi-google"></i>
                                                     </button>
                                                 } else if (provider.Name == "Microsoft") {
-                                                    <button type="submit" class="btn btn-primary rounded-5 shadow" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                                    <button type="submit" class="btn btn-primary rounded-4 shadow" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
                                                         <i class="bi bi-microsoft"></i>
                                                     </button>
                                                 }

@@ -67,9 +67,10 @@ builder.Services.Configure<IdentityOptions> (options => {
     options.SignIn.RequireConfirmedAccount = true;
 });
 
+// Cấu hình Cookie
 builder.Services.ConfigureApplicationCookie (options => {
-    options.LoginPath = "/dangnhap/";
-    options.LogoutPath = "/dangxuat/";
+    options.LoginPath = "/login/";
+    options.LogoutPath = "/logout/";
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
 });
 
