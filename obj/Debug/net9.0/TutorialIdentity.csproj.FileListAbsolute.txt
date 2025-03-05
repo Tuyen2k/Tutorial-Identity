@@ -401,6 +401,5 @@ C:\Users\glauca\Desktop\TutorialIdentity\obj\Debug\net9.0\ref\TutorialIdentity.d
 C:\Users\glauca\Desktop\TutorialIdentity\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 C:\Users\glauca\Desktop\TutorialIdentity\bin\Debug\net9.0\MailKit.dll
 C:\Users\glauca\Desktop\TutorialIdentity\bin\Debug\net9.0\MimeKit.dll
-C:\Users\glauca\Desktop\TutorialIdentity\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\glauca\Desktop\TutorialIdentity\bin\Debug\net9.0\DotNetEnv.dll
 C:\Users\glauca\Desktop\TutorialIdentity\bin\Debug\net9.0\Sprache.dll
