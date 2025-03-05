@@ -23,6 +23,9 @@ namespace AppDb.Data{
                     entityType.SetTableName (tableName.Substring (6));
                 }
             }
+
+            // lọc user đã bị xóa
+            modelBuilder.Entity<AppUser> ().HasQueryFilter(u => !u.IsDeleted);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

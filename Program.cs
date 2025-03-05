@@ -7,6 +7,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 using System.Security.Claims;
 using DotNetEnv;
+using TutorialIdentity.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +29,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.Configure<MailSetting>(builder.Configuration.GetSection("MailSettings"));
+
+
+// congigue service
 builder.Services.AddSingleton<MailSetting>(sp => sp.GetRequiredService<IOptions<MailSetting>>().Value);
+builder.Services.AddScoped<SignInManager<AppUser>, CustomSignInManager>();
+
 
 
 builder.Services.AddIdentity<AppUser, IdentityRole>()

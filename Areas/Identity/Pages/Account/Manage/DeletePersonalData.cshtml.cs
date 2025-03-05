@@ -87,7 +87,7 @@ namespace TutorialIdentity.Areas.Identity.Pages.Account.Manage
                 }
             }
 
-            var result = await _userManager.DeleteAsync(user);
+            var result = await SoftDeleteUser(user);
             var userId = await _userManager.GetUserIdAsync(user);
             if (!result.Succeeded)
             {
@@ -99,6 +99,11 @@ namespace TutorialIdentity.Areas.Identity.Pages.Account.Manage
             _logger.LogInformation("User with ID '{UserId}' deleted themselves.", userId);
 
             return Redirect("~/");
+        }
+
+        private async Task<IdentityResult> SoftDeleteUser(AppUser user) {
+            user.IsDeleted = true;
+            return await _userManager.UpdateAsync(user);
         }
     }
 }
