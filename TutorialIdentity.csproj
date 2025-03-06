@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Shared\_Pagination.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Pages\Shared\_Pagination.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="DotNetEnv" Version="3.1.1" />
     <PackageReference Include="MailKit" Version="4.10.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.3.0" />

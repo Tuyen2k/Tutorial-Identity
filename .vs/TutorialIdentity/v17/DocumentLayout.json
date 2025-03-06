@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\pages\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:pages\\shared\\_pagination.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\pages\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:pages\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\pages\\shared\\_pagination.cshtml||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:pages\\shared\\_pagination.cshtml||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\admin\\pages\\user\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\admin\\pages\\user\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\admin\\pages\\user\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +13,70 @@
     {
       "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\admin\\pages\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\admin\\pages\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\admin\\pages\\user\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\admin\\pages\\user\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\models\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:models\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\admin\\pages\\user\\_statusmessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\admin\\pages\\user\\_statusmessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\confirmemail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\manage\\setpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\setpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\manage\\setpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\setpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\manage\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|c:\\users\\glauca\\desktop\\tutorialidentity\\areas\\identity\\pages\\account\\accessdenied.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85AE2D3E-AC9B-411B-A043-7D7FE0A8C314}|TutorialIdentity.csproj|solutionrelative:areas\\identity\\pages\\account\\accessdenied.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,77 +86,255 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Pagination.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Models\\Pagination.cs",
+              "RelativeDocumentMoniker": "Models\\Pagination.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Models\\Pagination.cs",
+              "RelativeToolTip": "Models\\Pagination.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T09:35:54.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T09:15:38.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T09:15:11.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADYAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T09:02:46.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExternalLogin.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAUwIQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T04:50:18.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAkwGYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T08:56:53.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_StatusMessage.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\_StatusMessage.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Pages\\User\\_StatusMessage.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\_StatusMessage.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Pages\\User\\_StatusMessage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T07:11:58.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SetPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAMwGYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T07:08:28.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\SetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T05:15:54.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAwGsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T05:15:09.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Email.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T04:14:25.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T04:08:58.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAA9wD8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T04:00:49.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConfirmEmail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwC0AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T03:51:38.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccessDenied.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T03:51:34.895Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Pagination.cshtml",
-              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_Pagination.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Pagination.cshtml",
-              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_Pagination.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Pagination.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-05T09:50:53.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-05T09:50:47.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Pagination.cshtml",
-              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_Pagination.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Pagination.cshtml",
-              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Pages\\Shared\\_Pagination.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Pagination.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-05T09:28:35.759Z",
+              "Title": "Detail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Detail.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Pages\\User\\Detail.cshtml.cs",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Detail.cshtml.cs",
+              "RelativeToolTip": "Areas\\Admin\\Pages\\User\\Detail.cshtml.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAUwDkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T03:46:29.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Pages\\User\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Detail.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Pages\\User\\Detail.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T03:46:26.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Pages\\User\\Index.cshtml.cs",
               "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Index.cshtml.cs",
               "RelativeToolTip": "Areas\\Admin\\Pages\\User\\Index.cshtml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAA4wCsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T08:26:15.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Pages\\User\\Index.cshtml",
               "ToolTip": "C:\\Users\\glauca\\Desktop\\TutorialIdentity\\Areas\\Admin\\Pages\\User\\Index.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Pages\\User\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-05T08:26:14.833Z",
               "EditorCaption": ""
