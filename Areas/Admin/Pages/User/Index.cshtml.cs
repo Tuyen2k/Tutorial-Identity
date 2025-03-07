@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TutorialIdentity.Models;
 
 namespace TutorialIdentity.Areas.Admin.Pages.User {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class IndexModel : PageModel {
         private readonly ILogger<IndexModel> _logger;
         private readonly UserManager<AppUser> _userManager;
@@ -17,7 +17,11 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
             _logger = logger;
         }
 
-        public List<AppUser> Users { get; set; }
+        public class UserAndRole : AppUser {
+            public string? Roles { get; set; }
+        }
+
+        public List<UserAndRole> Users { get; set; }
 
         public int CurrentCount { get; set; }
         public Pagination Pagination { get; set; }
@@ -36,21 +40,50 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
             if (ps < 1) ps = 10;
 
             int total;
+            List<AppUser> users;
             if (!string.IsNullOrEmpty(search)) {
 
-                Users = await _userManager.Users
+                users = await _userManager.Users
                     .Where(u => u.UserName.Contains(search) || u.Email.Contains(search))
+                    .OrderBy(u => u.UserName)
                     .Skip((p - 1) * ps)
                     .Take(ps)
                     .ToListAsync();
+                    
 
                 total = await _userManager.Users
                     .Where(u => u.UserName.Contains(search) || u.Email.Contains(search))
                     .CountAsync();
             } else {
-                Users = await _userManager.Users.Skip((p - 1) * ps).Take(ps).ToListAsync();
+                users = await _userManager.Users.OrderBy(u => u.UserName).Skip((p - 1) * ps).Take(ps).ToListAsync();
                 total = await _userManager.Users.CountAsync();
             }
+
+            Users = users.Select(u => new UserAndRole {
+                        Id = u.Id,
+                        UserName = u.UserName,
+                        Email = u.Email,
+                        FullName = u.FullName,
+                        Address = u.Address,
+                        PhoneNumber = u.PhoneNumber,
+                        AccessFailedCount = u.AccessFailedCount,
+                        Avatar = u.Avatar,
+                        IsDeleted = u.IsDeleted,
+                        ConcurrencyStamp = u.ConcurrencyStamp,
+                        LockoutEnabled = u.LockoutEnabled,
+                        EmailConfirmed = u.EmailConfirmed,
+                        PhoneNumberConfirmed = u.PhoneNumberConfirmed,
+                        TwoFactorEnabled = u.TwoFactorEnabled,
+                        LockoutEnd = u.LockoutEnd,
+                        NormalizedEmail = u.NormalizedEmail,
+                        NormalizedUserName = u.NormalizedUserName,
+                        PasswordHash = u.PasswordHash,
+                        SecurityStamp = u.SecurityStamp
+                    }).ToList();
+
+            Users.ForEach(u => {
+                u.Roles = string.Join(", ", _userManager.GetRolesAsync(u).Result);
+            });
 
             CurrentCount = ((p - 1) * ps) + 1;
             var totalPage = (int)Math.Ceiling((double)total / ps);

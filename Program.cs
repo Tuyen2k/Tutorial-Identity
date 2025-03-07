@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 using System.Security.Claims;
 using DotNetEnv;
 using TutorialIdentity.Services;
+using TutorialIdentity.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,7 +38,7 @@ builder.Services.AddScoped<SignInManager<AppUser>, CustomSignInManager>();
 
 
 
-builder.Services.AddIdentity<AppUser, IdentityRole>()
+builder.Services.AddIdentity<AppUser, AppRole>()
         .AddEntityFrameworkStores<AppDbContext>()
         .AddDefaultTokenProviders();
 

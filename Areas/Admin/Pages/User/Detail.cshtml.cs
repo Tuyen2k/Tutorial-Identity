@@ -2,16 +2,21 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Shared;
 using System.ComponentModel.DataAnnotations;
+using TutorialIdentity.Models;
 
 namespace TutorialIdentity.Areas.Admin.Pages.User {
-    [Authorize]
+    [Authorize(Roles = "Admin,Editor")]
     public class DetailModel : PageModel {
         private readonly UserManager<AppUser> _userManager;
-        public DetailModel(UserManager<AppUser> userManager) {
+        private readonly RoleManager<AppRole> _roleManager;
+        public DetailModel(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager) {
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         [TempData]
@@ -22,9 +27,16 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
 
         public bool IsDetail { get; set; } = false;
         public bool IsCreate { get; set; } = false;
+        public List<string> Roles { get; set; }
+        public SelectList SelectListRoles { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string? userId, bool isDetail) {
+
+            Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
+            SelectListRoles = new SelectList(Roles);
+
             if (string.IsNullOrEmpty(userId)) {
+                Input = new InputModel();
                 IsCreate = true;
                 ViewData["Title"] = "Thêm mới người dùng";
                 return Page();
@@ -42,7 +54,10 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
                 FullName = user.FullName,
                 Address = user.Address,
                 PhoneNumber = user.PhoneNumber,
+                Password = "q123456",
             };
+
+            
 
             Input.Id = userId;
 
@@ -53,7 +68,9 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
                 ViewData["Title"] = "Chỉnh sửa người dùng";
             }
 
-
+            
+            Input.Roles = (await _userManager.GetRolesAsync(user)).ToList();
+            
             return Page();
         }
 
@@ -84,11 +101,12 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
                     PhoneNumber = Input.PhoneNumber,
                     LockoutEnabled = true,
                 };
-                var result = await _userManager.CreateAsync(user, "q123456");
+                var result = await _userManager.CreateAsync(user, string.IsNullOrEmpty(Input.Password) ? "q123456" : Input.Password );
                 if (!result.Succeeded) {
                     foreach (var error in result.Errors) {
                         ModelState.AddModelError(string.Empty, error.Description);
                     }
+                    Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
                     return Page();
                 }
             } else {
@@ -105,14 +123,31 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
                 user.Address = Input.Address;
                 user.PhoneNumber = Input.PhoneNumber;
 
+                if (!Input.Password.Equals("q123456") && !string.IsNullOrEmpty(Input.Password)) {
+                    var removePassword = await _userManager.RemovePasswordAsync(user);
+                    var updatePassword = await _userManager.AddPasswordAsync(user, Input.Password);
+                }
 
                 var result = await _userManager.UpdateAsync(user);
                 if (!result.Succeeded) {
                     foreach (var error in result.Errors) {
                         ModelState.AddModelError(string.Empty, error.Description);
                     }
+                    Roles = await _roleManager.Roles.Select(r => r.Name).ToListAsync();
                     return Page();
                 }
+            }
+
+            var userRoles = await _userManager.GetRolesAsync(user);
+            var rolesToAdd = Input.Roles.Except(userRoles).ToList();
+            var rolesToRemove = userRoles.Except(Input.Roles).ToList();
+
+            if (rolesToAdd.Any()) {
+                await _userManager.AddToRolesAsync(user, rolesToAdd);
+            }
+
+            if (rolesToRemove.Any()) {
+                await _userManager.RemoveFromRolesAsync(user, rolesToRemove);
             }
 
             return RedirectToPage("./Index");
@@ -143,11 +178,14 @@ namespace TutorialIdentity.Areas.Admin.Pages.User {
         [Display(Name = "Số điện thoại")]
         public string PhoneNumber { get; set; }
 
-        //[Required(ErrorMessage = "{0} không được để trống")]
-        //[StringLength(100, ErrorMessage = "{0} phải có độ dài từ {2} đến {1} ký tự.", MinimumLength = 6)]
-        //[DataType(DataType.Password)]
-        //[Display(Name = "Mật khẩu")]
-        //public string Password { get; set; }
+
+        [StringLength(100, ErrorMessage = "{0} phải có độ dài từ {2} đến {1} ký tự.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Mật khẩu")]
+        public string Password { get; set; }
+
+        [Display(Name = "Vai trò")]
+        public List<string> Roles { get; set; } = [];
     }
 
 }

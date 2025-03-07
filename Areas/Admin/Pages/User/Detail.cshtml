@@ -63,27 +63,37 @@
                     <label asp-for="Input.Email" class="form-label"></label>
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
-                @* <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" aria-required="true" autocomplete="password" placeholder="" />
-                    <label asp-for="Input.Password" class="form-label"></label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div> *@
                 <div class="form-floating mb-3">
-
                     <input asp-for="Input.FullName" class="form-control" aria-required="true" placeholder="" />
                     <label asp-for="Input.FullName" class="form-label"></label>
                     <span asp-validation-for="Input.FullName" class="text-danger"></span>
                 </div>
                 <div class="form-floating mb-3">
-
                     <input asp-for="Input.Address" class="form-control" aria-required="true" placeholder="" />
                     <label asp-for="Input.Address" class="form-label"></label>
                     <span asp-validation-for="Input.Address" class="text-danger"></span>
                 </div>
+
                 <div class="form-floating mb-3">
                     <input asp-for="Input.PhoneNumber" class="form-control" placeholder="" />
                     <label asp-for="Input.PhoneNumber" class="form-label"></label>
                     <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" placeholder="" />
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                
+                <div class="mb-3">  
+                    <label asp-for="Input.Roles" class="form-label"></label>
+                    <select asp-for="Input.Roles" class="form-control" multiple>
+                        @foreach (var role in Model.Roles) {
+                            <option value="@role" selected="@(Model.Input.Roles.Contains(role))">@role</option>
+                        }
+                    </select>
                 </div>
 
                 <div class="form-floating mb-3">

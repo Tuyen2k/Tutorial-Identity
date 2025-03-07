@@ -1,0 +1,48 @@
+﻿@page
+@model TutorialIdentity.Areas.Admin.Pages.Role.DetailModel
+@{
+
+}
+
+<h1>@ViewData["Title"]</h1>
+<partial name="_StatusMessage" for="StatusMessage" />
+
+@if (Model.IsDetail) {
+    <div>
+        <h4>Thông tin chi tiết</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Input.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Input.Name)
+            </dd>
+        </dl>
+    </div>
+} else {
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                <input type="hidden" asp-for="Input.Id" />
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Name" class="form-control" aria-required="true" placeholder="" />
+                    <label asp-for="Input.Name" class="form-label"></label>
+                    <span asp-validation-for="Input.Name" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="submit" value="Lưu" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+
+<div>
+    <a asp-asp-area="Admin" asp-page="/Role/Index">Quay lại</a>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

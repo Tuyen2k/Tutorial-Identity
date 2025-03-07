@@ -2,9 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using TutorialIdentity.Models;
 
 namespace AppDb.Data{
-    public class AppDbContext : IdentityDbContext<AppUser>
+    public class AppDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -26,6 +27,7 @@ namespace AppDb.Data{
 
             // lọc user đã bị xóa
             modelBuilder.Entity<AppUser> ().HasQueryFilter(u => !u.IsDeleted);
+            modelBuilder.Entity<AppRole> ().HasQueryFilter(u => !u.IsDeleted);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
