@@ -1,0 +1,10 @@
+From: Admin app tutorial identity <tuyen4835@gmail.com>
+Date: Tue, 25 Feb 2025 15:32:53 +0700
+Subject: Confirm your email
+Message-Id: <UZXZDRMRHPU4.ET8VAZMD5KIL3@desktop-1n01jj7>
+Sender: Admin app tutorial identity <tuyen4835@gmail.com>
+To: "tuyen4835@gmail.com" <tuyen4835@gmail.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Please confirm your account by <a href='http://localhost:5163/Identity/Account/ConfirmEmail?userId=42c68233-e569-469d-81a7-37e1d1c2caf2&amp;code=Q2ZESjhMQXZTS1ZwVzB0RnFxeU13M01QaExQRFcvTVV5cHoxY3F3eTNCeERaM282MmRHYXdDWlFjaGxjNWlPK0g3OXJJc0FoSC9XaFE4RGdJZnA0N09WNjdvelNFcU4wZDRmT0Zxa01ST2dIYjhSSkdDTXV2K2VjVm53VFl3d1hsdzFIZm03a2J3aVl1VmFuUmczTEhLSERjT293L0dZbThsOVZ6UzJIYjJ6YTRXUjZUdjlkRWtDZXA3b0lJczR4TU56ZEZjSnJBUkNzb3V1Um1VSmQyMVQycGFlMDVxYzNCanVvWVRpbGwyTitsODVSaHMzWlA0aFFGVEhXVXpPZmhjM1JMQT09&amp;returnUrl=%2F'>clicking here</a>.

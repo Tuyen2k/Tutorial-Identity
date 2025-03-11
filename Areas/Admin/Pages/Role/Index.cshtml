@@ -1,0 +1,100 @@
+﻿@page "/admin/roles"
+@model TutorialIdentity.Areas.Admin.Pages.Role.IndexModel
+@{
+    ViewData["Title"] = "Quản lý vai trò";
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<section>
+    <h3>Danh sách vai trò</h3>
+
+    <div class="d-flex justify-content-between">
+        <a class="btn btn-primary" asp-area="Admin" asp-page="/Role/Detail">Thêm mới</a>
+        <form method="get">
+            <div class="input-group">
+                <input type="text" class="form-control" name="search" value="@Model.Search" placeholder="Tìm kiếm theo tên">
+                <button class="btn btn-outline-secondary" type="submit">Tìm kiếm</button>
+            </div>
+        </form>
+    </div>
+
+    @if (Model.Roles.Count == 0) {
+        <p>Không có vai trò nào</p>
+    } else {
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in Model.Roles) {
+                    <tr>
+                        <th scope="row">@(Model.CurrentCount++)</th>
+                        <td>@role.Name</td>
+                        <td>
+                            <div>
+                                <a class="btn btn-info" asp-area="Admin" asp-page="/Role/Detail" asp-route-isDetail="true" asp-route-roleId="@role.Id">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                                <a class="btn btn-warning" asp-area="Admin" asp-page="/Role/Detail" asp-route-roleId="@role.Id">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                                <a class="btn btn-danger"
+                                   data-bs-toggle="modal"
+                                   data-bs-target="#deleteRoleModal"
+                                   data-role-id="@role.Id"
+                                   data-role-name="@role.Name" >
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <partial name="_PaginationPartial" model="Model.Pagination" />
+    }
+
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteRoleModal" tabindex="-1" aria-labelledby="deleteRoleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteRoleModalLabel">Xóa vai trò người dùng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bạn có chắc muốn xóa vai trò người dùng <strong id="deleteRoleName"></strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <form method="post" asp-page-handler="Delete">
+                    <input type="hidden" id="deleteRoleId" name="userId" />
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-danger">Xác nhận</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var deleteUserModal = document.getElementById('deleteRoleModal');
+        deleteUserModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget; // Nút được nhấn để mở modal
+            var userId = button.getAttribute('data-role-id');
+            var userName = button.getAttribute('data-role-name');
+
+            // Gán dữ liệu vào modal
+            document.getElementById('deleteRoleId').value = userId;
+            document.getElementById('deleteRoleName').textContent = userName;
+        });
+    });
+</script>
+
+

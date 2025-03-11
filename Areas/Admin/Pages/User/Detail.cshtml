@@ -1,0 +1,114 @@
+﻿@page
+@model TutorialIdentity.Areas.Admin.Pages.User.DetailModel
+@{
+
+}
+
+<h1>@ViewData["Title"]</h1>
+<partial name="_StatusMessage" for="StatusMessage" />
+
+@if (Model.IsDetail) {
+    <div>
+        <h4>Thông tin chi tiết</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Input.UserName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Input.UserName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Input.Email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Input.Email)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Input.FullName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Input.FullName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Input.PhoneNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Input.PhoneNumber)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Input.Address)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Input.Address)
+            </dd>
+        </dl>
+    </div>
+} else {
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                @if (Model.IsCreate) {
+                    <p>Mật khẩu mặc định: q123456</p>
+                }
+                <input type="hidden" asp-for="Input.Id" />
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.UserName" class="form-control" aria-required="true" placeholder="" />
+                    <label asp-for="Input.UserName" class="form-label"></label>
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+
+                    <input asp-for="Input.Email" class="form-control" aria-required="true" autocomplete="email" placeholder="" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.FullName" class="form-control" aria-required="true" placeholder="" />
+                    <label asp-for="Input.FullName" class="form-label"></label>
+                    <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Address" class="form-control" aria-required="true" placeholder="" />
+                    <label asp-for="Input.Address" class="form-label"></label>
+                    <span asp-validation-for="Input.Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.PhoneNumber" class="form-control" placeholder="" />
+                    <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" placeholder="" />
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                
+                <div class="mb-3">  
+                    <label asp-for="Input.Roles" class="form-label"></label>
+                    <select asp-for="Input.Roles" class="form-control" multiple>
+                        @foreach (var role in Model.Roles) {
+                            <option value="@role" selected="@(Model.Input.Roles.Contains(role))">@role</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="submit" value="Lưu" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+}
+
+
+<div>
+    <a asp-asp-area="Admin" asp-page="/User/Index">Quay lại</a>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
