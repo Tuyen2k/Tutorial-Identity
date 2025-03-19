@@ -1,0 +1,152 @@
+﻿@model TutorialIdentity.Models.Pagination;
+@{
+    int currentPage = Model.CurrentPage;
+    int totalPage = Model.TotalPages;
+    int pageSize = Model.PageSize;
+    var generateUrl = Model.GetPageUrl;
+
+    if (currentPage > totalPage)
+        currentPage = totalPage;
+
+    if (totalPage <= 1) return;
+
+
+    int? preview = null;
+    int? next = null;
+
+    if (currentPage > 1)
+        preview = currentPage - 1;
+
+    if (currentPage < totalPage)
+        next = currentPage + 1;
+
+    // Các trang hiện thị trong điều hướng
+    List<int> pagesRanges = new List<int>();
+
+
+    int delta = 3;             // Số trang mở rộng về mỗi bên trang hiện tại
+    int remain = delta * 2;     // Số trang hai bên trang hiện tại
+
+    pagesRanges.Add(currentPage);
+    // Các trang phát triển về hai bên trang hiện tại
+    for (int i = 1; i <= delta; i++) {
+        if (currentPage + i <= totalPage) {
+            pagesRanges.Add(currentPage + i);
+            remain--;
+        }
+
+        if (currentPage - i >= 1) {
+            pagesRanges.Insert(0, currentPage - i);
+            remain--;
+        }
+
+    }
+    // Xử lý thêm vào các trang cho đủ remain
+    //(xảy ra ở đầu mút của khoảng trang không đủ trang chèn  vào)
+    if (remain > 0) {
+        if (pagesRanges[0] == 1) {
+            for (int i = 1; i <= remain; i++) {
+                if (pagesRanges.Last() + 1 <= totalPage) {
+                    pagesRanges.Add(pagesRanges.Last() + 1);
+                }
+            }
+        } else {
+            for (int i = 1; i <= remain; i++) {
+                if (pagesRanges.First() - 1 > 1) {
+                    pagesRanges.Insert(0, pagesRanges.First() - 1);
+                }
+            }
+        }
+    }
+
+}
+
+@* PHÁT SINH HTML*@
+
+
+
+<ul class="pagination d-flex justify-content-end">
+
+    <li class="page-item me-3">
+        <div class="align-items-center d-flex form-group gap-1">
+            <label for="pageSize">Số lượng</label>
+            <form method="get">
+                <input type="hidden" name="p" value="@Model.CurrentPage" />
+                <select name="ps" id="pageSize" class="form-control" onchange="this.form.submit()">
+                    <option value="10" selected="@(pageSize == 10)">10</option>
+                    <option value="20" selected="@(pageSize == 20)">20</option>
+                    <option value="50" selected="@(pageSize == 50)">50</option>
+                    <option value="100" selected="@(pageSize == 100)">100</option>
+                </select>
+            </form>
+        </div>
+    </li>
+
+
+    <!-- First and Previous page link -->
+    @if (preview != null) {
+        <li class="page-item">
+            <a class="page-link" href="@generateUrl(1,pageSize)">
+                <i class="bi bi-chevron-double-left"></i>
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="@generateUrl(preview,pageSize)">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+        </li>
+    } else {
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <i class="bi bi-chevron-double-left"></i>
+            </a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+        </li>
+    }
+
+    <!-- Numbered page links -->
+    @foreach (var pageItem in pagesRanges) {
+        if (pageItem != currentPage) {
+            <li class="page-item">
+                <a class="page-link" href="@generateUrl(pageItem,pageSize)">
+                    @pageItem
+                </a>
+            </li>
+        } else {
+            <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">@pageItem</a>
+            </li>
+        }
+    }
+
+
+    <!-- Last and Next page link -->
+    @if (next != null) {
+        <li class="page-item">
+            <a class="page-link" href="@generateUrl(next,pageSize)">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="@generateUrl(totalPage,pageSize)">
+                <i class="bi bi-chevron-double-right"></i>
+            </a>
+        </li>
+    } else {
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <i class="bi bi-chevron-double-right"></i>
+            </a>
+        </li>
+    }
+
+</ul>

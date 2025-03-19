@@ -1,0 +1,85 @@
+﻿@page "/login/"
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<section class="vh-100">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card p-5 shadow p-3 mb-5 bg-body rounded" style="border-radius: 15px;">
+                        <div class="card-body ">
+                            <h2 class="text-uppercase text-center mb-5">@ViewData["Title"]</h2>
+
+                            <form id="account" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.UserNameOrEmail" class="form-control" autocomplete="username" aria-required="true" placeholder="" />
+                                    <label asp-for="Input.UserNameOrEmail" class="form-label"></label>
+                                    <span asp-validation-for="Input.UserNameOrEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="" />
+                                    <label asp-for="Input.Password" class="form-label"></label>
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                </div>
+                                <div class="checkbox mb-3">
+                                    <label asp-for="Input.RememberMe" class="form-label">
+                                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                    </label>
+                                </div>
+                                <div>
+                                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Đăng nhập</button>
+                                </div>
+                                <div class="my-3">
+                                    <p>
+                                        <a id="forgot-password" asp-page="./ForgotPassword">Quên mật khẩu?</a>
+                                    </p>
+                                    <p>
+                                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Đăng ký tài khoản mới</a>
+                                    </p>
+                                    <p>
+                                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Gửi lại email xác thực</a>
+                                    </p>
+                                </div>
+                            </form>
+
+                            @{
+                                if ((Model.ExternalLogins?.Count ?? 0) > 0) {
+                                    <h5 class="text-center">Hoặc tiếp tục với dịch vụ ngoài</h5>
+                                    <hr />
+                                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                                        <div class="d-flex gap-3 justify-content-center">
+                                            @foreach (var provider in Model.ExternalLogins!) {
+                                                if (provider.Name == "Google") {
+
+                                                    <button type="submit" class="btn btn-primary rounded-4 shadow" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                                        <i class="bi bi-google"></i>
+                                                    </button>
+                                                } else if (provider.Name == "Microsoft") {
+                                                    <button type="submit" class="btn btn-primary rounded-4 shadow" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                                        <i class="bi bi-microsoft"></i>
+                                                    </button>
+                                                }
+                                            }
+                                        </div>
+                                    </form>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
