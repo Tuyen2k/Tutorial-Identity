@@ -4,13 +4,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 using System.Security.Claims;
 using DotNetEnv;
 using TutorialIdentity.Services;
 using TutorialIdentity.Models;
 using Serilog;
-using Microsoft.CodeAnalysis.Options;
 
 
 var builder = WebApplication.CreateBuilder(args);

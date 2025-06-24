@@ -38,7 +38,7 @@ public class SendEmailModel : PageModel
             <div style=""max-width: 800px; margin: auto; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"">
             <div class=""container-email"">
                 <div class=""hnc-email-header"">
-                    <img src=""/images/hnc-email-header.png"" alt=""hnc-logo"" style=""width: 100%; height: auto;"">
+                    <img src=""cid:headerImage"" alt=""hnc-logo"" style=""width: 100%; height: auto;"">
                 </div>
                 <div class=""hnc-email-body"" style=""padding: 30px 60px;"">
                     <div class=""title"" style=""font-size: x-large; font-weight: bold; color: #333; margin-bottom: 20px;"">
@@ -53,8 +53,8 @@ public class SendEmailModel : PageModel
                             Chúc bạn luôn vững bước và đạt được những điều tuyệt vời nhất trên hành trình của mình!
                         </p>
                         <p>Thân mến,</p>
-                        <img src=""/images/hnc-logo.png"" alt=""hnc-logo"" style=""width: 100px; height: auto;"">
-                        <img src=""/images/hnc-email-footer.png"" alt="""" style=""width: 100%; height: auto;"">
+                        <img src=""cid:logoImage"" alt=""hnc-logo"" style=""width: 100px; height: auto;"">
+                        <img src=""cid:footerImage"" alt=""hnc-footer"" style=""width: 100%; height: auto;"">
                     </div>
                 </div>
             </div>
