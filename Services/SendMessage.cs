@@ -16,7 +16,7 @@ public class SendMessage : IEmailSender
         _mailSetting = mailSetting;
     }
     public async Task SendEmailAsync(string toEmail, string subject, string htmlMessage)
-    {
+    { 
         var email = new MimeMessage();
         email.Sender = new MailboxAddress(_mailSetting.DisplayName, _mailSetting.Mail);
         email.From.Add(new MailboxAddress(_mailSetting.DisplayName, _mailSetting.Mail));
